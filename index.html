@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Title -->
+    <title>Mario NN</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <style>
+      #mario {
+        padding-top: 2em;
+      }
+      .w-100 {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col s12 m6 center">
+        <canvas id="mario" width="500" height="512"></canvas>
+      </div>
+      <div class="col s12 m6 center">
+        <h2>Mario Neural Network</h2>
+
+        <hr />
+
+        <h3>目前分數 : <span id="score">0</span></h3>
+        <h3>最高分數 : <span id="maxScore">0</span></h3>
+        <h3>訓練次數 : <span id="generation">0</span></h3>
+        <h3>馬力歐數 : <span id="alives">0</span> / 50</h3>
+
+        <hr />
+
+        <h3>訓練速度 : <span id="speed">X 1</span></h3>
+        <input type="range" id="slide" min="1" max="6" step="0.1" value="1" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 center">
+        <img class="w-100" src="img/nn.svg" alt="nn flow" />
+      </div>
+      <div class="col s12 center">
+        <img class="w-100" src="img/nn_workflow.png" alt="nn work flow" />
+      </div>
+    </div>
+
+    <script src="Neuroevolution.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
